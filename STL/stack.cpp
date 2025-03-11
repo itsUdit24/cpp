@@ -46,6 +46,26 @@ void explainStack(){
     No, you don't have an iterator concept here.
     The only way to get the elements of stack is by taking it out of the stack.
     */
+    // st.top(); // This will return the top element of the stack.
+    cout<<st.top()<<" "; //output: 7
+    st.pop(); // This will remove the top element of the stack. It deletes 7 from the stack.
+    cout<<st.top()<<" "; //output: 1
+    st.pop(); // deletes 1 from the stack.
+    cout<<st.top()<<" "; //output: Runtime Error. As there is no element in the stack.
+
+    //Printing the stack
+    st.push(1);
+    st.push(7);
+    st.push(71);
+    st.push(73);
+    st.push(17);
+    st.push(27);
+
+    while(st.empty() == false){        //while(!st.empty())-------empty() returns true if the stack is empty, otherwise false.
+        cout<<st.top()<<" "; //output: 27 17 73 71 7 1
+        st.pop();
+    }
+
 }
 int main(){
     explainStack();
