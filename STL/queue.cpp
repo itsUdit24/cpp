@@ -1,5 +1,6 @@
 /* 
 Queue in C++
+(FIFO - First In First Out)
 A queue is a container adapter that provides the functionality of a queue - specifically, 
 a FIFO (first-in, first-out) data structure. 
 This means that the first element added to the queue will be the first one to be removed. 
@@ -48,3 +49,59 @@ int main() {
 In this example, people are added to the queue using the push method and served using the pop method. The front method is used to access the first person in the queue.
 
 */
+#include<bits/stdc++.h>
+using namespace std;
+
+void explainQueue(){
+    // Empty Queue
+    queue<int> q;
+    q.push(10);
+    q.push(20);
+    q.push(30);
+
+    cout << "Front of Queue: " << q.front() << endl;
+    cout << "Back of Queue: " << q.back() << endl;
+
+    q.pop();
+    cout << "After Pop Front of Queue: " << q.front() << endl;
+
+    cout << "Size of Queue: " << q.size() << endl;
+    cout << "Is Queue Empty: " << q.empty() << endl;
+
+    cout << "Queue Elements: ";
+    while(!q.empty()){
+        cout << q.front() << " ";
+        q.pop();
+    }
+    cout << endl;
+/*
+Output:
+Front of Queue: 10
+Back of Queue: 30
+After Pop Front of Queue: 20
+Size of Queue: 2
+Is Queue Empty: 0
+Queue Elements: 20 30
+*/
+queue<int>qu;
+    qu.push(2);
+    qu.push(22);
+    qu.push(23);
+    qu.push(24);
+    while(qu.empty()==false){
+        cout<<qu.front()<<" ";
+        qu.pop();
+    }
+
+    /*
+    Output:
+    2 22 23 24 
+    */
+
+}
+
+int main(){
+    explainQueue();
+    return 0;
+}
+
