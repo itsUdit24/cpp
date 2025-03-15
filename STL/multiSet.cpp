@@ -51,15 +51,53 @@ Output:
 Multiset elements: 10 10 20 30
 Count of 10: 2
 
-In this example, elements are added to the multiset using the "insert" method. The multiset allows duplicate elements and stores them in sorted order. The "count" method is used to find the number of occurrences of a specific element.
+In this example, elements are added to the multiset using the "insert" method. 
+The multiset allows duplicate elements and stores them in sorted order. 
+The "count" method is used to find the number of occurrences of a specific element.
 
 */
 #include<bits/stdc++.h>
 using namespace std;
 
 void explainmultiSet(){
-//It is very much similar to set data structure but the only difference is that it can
-//store repeating elements as well.
+//It is very much similar to the set data structure but the only difference is that it 
+//stores repeating elements as well.
+
+multiset<int> ms;
+ms.insert(1);
+ms.insert(1);
+ms.insert(1);
+ms.insert(1);
+ms.insert(2);
+ms.insert(0);
+ms.insert(21);
+ms.insert(21);
+
+for (auto it: ms){
+    cout << it << " "; // 0 1 1 1 1 2 21 21
+
+}
+
+auto it = ms.find(1); // It will point to the first occurrence of 1, so first 1 not to the last 1.
+/*
+
+auto it = ms.erase(1); // It will delete all the occurrences of 1.
+for (auto it: ms){
+    cout << it << " "; // 0 2 21 21
+}
+
+ What if I want to delete 1 of the ones.
+ auto it = ms.find(1);
+ st.erase(it);
+
+            OR
+auto it = ms.erase(ms.find(1)); // It will delete the first occurrence of 1.
+for (auto it: ms){
+    cout << it << " "; // 0 1 1 1 2 21 21
+}
+
+*/
+cout<< ms.count(1) << endl; // 4, Cuz it will count all the occurrences of 1.
 
 }
 
