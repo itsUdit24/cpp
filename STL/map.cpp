@@ -60,8 +60,14 @@ Alice: 90
 Bob: 85
 Charlie: 95
 Bob's grade: 85
-In this example, a map named studentGrades is created to store student names (keys) and their grades (values). Elements are added to the map using the key-value syntax. The elements are displayed in sorted order based on the keys. The find method is used to search for a key in the map, and the value corresponding to the key is retrieved using the key itself.
+In this example, a map named studentGrades is created to store student names (keys) and their grades (values). 
+Elements are added to the map using the key-value syntax. The elements are displayed in sorted order based on the keys. 
+The find method is used to search for a key in the map, 
+and the value corresponding to the key is retrieved using the key itself.
 
+In this example, elements are added to the map using the "[]" operator. 
+The map automatically ensures that the keys are unique and stored in sorted order. 
+The "find" method is used to check if a key exists in the map.
 */
 
 #include<bits/stdc++.h>
