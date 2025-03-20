@@ -119,7 +119,7 @@ void explainFind(){
 
 int arr[5] = {6, 2, 1, 1, 0};
 auto it = find (arr, arr+5, 1);
-cout << *it;  
+cout << *it;   
 
 
 
@@ -217,3 +217,5 @@ int main(){
     cout << endl;
 
 } */
+
+// 20/03/25
