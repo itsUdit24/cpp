@@ -119,7 +119,26 @@ void explainFind(){
 
 int arr[5] = {6, 2, 1, 1, 0};
 auto it = find (arr, arr+5, 1);
-cout << *it;   
+cout << *it;   //Output: 1, because it is the first occurrence of 1 in the array.
+// If I search for 5, it will print 0.
+// If I search for 1, it will print 1.
+cout << endl;
+/* auto it1 = find (arr, arr+5, 5);
+if (it1 != arr+5){
+    cout << "Element found" << endl;
+}
+else{
+    cout << "Element not found" << endl;
+}
+// If I search for 5, it will print "Element not found".
+*/
+
+auto it2 = find (arr, arr+5, 8);
+if (it2 = (arr+5)){
+    cout << "Element not found" << endl;
+}
+// Output: Element not found. Because 8 is not present in the array.
+
 
 
 
@@ -138,6 +157,115 @@ cout << *it;
     // If I search for 5, it will print "Element not found".
     */
 }
+
+void explainNextPermutation(){
+   //It works on everything array, vector, string, etc.
+   // It prints all the possible permutations in a sorted order.
+   string str = "abc" ;
+   do{
+    cout << str << endl;
+   } while(next_permutation(str.begin(), str.end())); // or str.begin()+3
+   /*
+   Output:
+    abc
+    acb
+    bac
+    bca
+    cab
+    cba
+
+
+    but if the input was bca then the output would be:
+    bca
+    cab
+    cba
+    Therefore it prints the permutations in a sorted order.
+    */
+
+    //You can also do it for a part of a string 
+   do{
+    cout << str << endl;
+   } while(next_permutation(str.begin(), str.begin()+2));  //+2 means till c but not including c. Therefore only ab will be printed.
+   //Output: 
+   // abc
+   // bac
+}
+
+void explainPrevPermutation(){
+    // It will go in the reverse order.
+    string str = "cba" ;
+   do{
+    cout << str << endl;
+   } while(prev_permutation(str.begin(), str.end())); // str.begin()+3
+
+   /*
+   Output:
+    cba
+    cab
+    bca
+    bac
+    acb
+    abc
+   
+     If str = "bac" then the output would be:
+     bac
+     acb
+     abc
+   
+   */
+
+}
+
+void explainMaxElement(){
+    int arr[] = {7, 6, 5, 10, 9};
+    auto it = max_element(arr, arr+5); //Don't give a * before max_element cuz it always returns an iterator.
+    cout << *it << endl; // 10
+    // If you are not giving * before it, then you will have to write *max_element(arr, arr+5) to get the output as 10.
+    // Similarly you can do it for min element as well. And it will return 5.
+
+
+   /*
+   co-pilot code:
+    // *max_element() - max_element(first_iterator, last_iterator)
+    int arr[5] = {6, 2, 1, 7, 8};
+    auto it = max_element(arr, arr+5);
+    cout << *it << endl; // 8
+    // Similarly for vector
+    vector<int> v = {5, 7, 8, 8, 1};
+    auto it1 = max_element(v.begin(), v.end());
+    cout << *it1 << endl; // 8
+
+    */
+}
+
+void explainReverse(){
+    // reverse(first_iterator, last_iterator) - O(N)
+    int arr[5] = {6, 2, 1, 7, 8};
+    reverse(arr, arr+5);
+    for (int i=0; i<5; i++){
+        cout << arr[i] << " "; // 8 7 1 2 6
+    }
+    cout << endl;
+
+    vector<int> v = {5, 7, 8, 8, 1};
+    reverse(v.begin(), v.end());
+    for (auto it: v){
+        cout << it << " "; // 1 8 8 7 5
+    }
+    cout << endl;
+}
+
+
+void explainComparator(){
+    // sort(first_iterator, last_iterator, compare_function) - This is used to sort the vector in decreasing order
+    vector<int> v = {5, 7, 8, 8, 1};
+    sort(v.begin(), v.end(), greater<int>());
+    for (auto it: v){
+        cout << it << " "; // 8 8 7 5 1
+    }
+    cout << endl;
+}
+
 int main(){
     explainSort();
     explainAccumulate();
@@ -150,6 +278,8 @@ int main(){
     explainNextPermutation();
     explainPrevPermutation();
     explainDistance();
+    explainReverse();
+    explainComparator();
 
     return 0;
 }
