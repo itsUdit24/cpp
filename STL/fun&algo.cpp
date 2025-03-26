@@ -257,13 +257,74 @@ void explainReverse(){
 
 
 void explainComparator(){
+    /*
+    el1 is 5
+    el2 is 6
+    internal comparator that takes el1 and el2 and returns true if el1 is less than el2.
+    and tells you if el1 should be before el2 or not.
+
+    What if we pick el1 as 6 and el2 as 1?
+    It says na el1 cannot be before el2. So, there is an internal comparator got it.
+  
+    */
+
+
+   int arr[] = {5, 6, 1, 2};
+    sort(arr, arr+4, greater<int>());
+    for (int i=0; i<4; i++){
+        cout << arr[i] << " "; // 6 5 2 1
+    }
+    cout << endl;
+    sort(arr, arr+4, less<int>());  //Default is less<int> so you don't have to write it.
+    for (int i=0; i<4; i++){
+        cout << arr[i] << " "; // 1 2 5 6
+    }
+    cout << endl;
+// let's sort in a descending order, using our own internal comparator function, rather than using the greater<int>.
+
+
+// tells true if el1 is before el2.
+// tells false if el1 (is not before el2) has to be after el2.
+
+    sort(arr, arr+4, [](int el1, int el2){
+        return el1 > el2;
+    });
+    for (int i=0; i<4; i++){
+        cout << arr[i] << " "; // 6 5 2 1
+    }
+    cout << endl;
+
+    // OR 
+    bool internalComparator(int el1, int el2) {
+        if (el1 < el2) return false;   //true
+        else
+        return true;                    //false ; then they will sort it in the ascending order.
+                                        // 1 2 5 6
+    }
+    // I did over write the internal comparator function. So I need to tell the sorting, hey can you
+    // use this comparator instead of using your own internal comparator.
+    sort(arr, arr+4, internalComparator);
+    for (int i=0; i<4; i++){
+        cout << arr[i] << " "; // 6 5 2 1
+    }
+
+   
+   
+   
+   
+   
+   
+   
+    /*
+    Co-pilot code:
     // sort(first_iterator, last_iterator, compare_function) - This is used to sort the vector in decreasing order
     vector<int> v = {5, 7, 8, 8, 1};
     sort(v.begin(), v.end(), greater<int>());
     for (auto it: v){
         cout << it << " "; // 8 8 7 5 1
     }
-    cout << endl;
+    cout << endl; 
+    */
 }
 
 int main(){
