@@ -295,12 +295,19 @@ void explainComparator(){
     cout << endl;
 
     // OR 
+    /* 
+    
+    Just define this bool function outside the main function.!!!!
+    
+    
     bool internalComparator(int el1, int el2) {
         if (el1 < el2) return false;   //true
         else
         return true;                    //false ; then they will sort it in the ascending order.
                                         // 1 2 5 6
     }
+
+
     // I did over write the internal comparator function. So I need to tell the sorting, hey can you
     // use this comparator instead of using your own internal comparator.
     sort(arr, arr+4, internalComparator);
@@ -308,7 +315,7 @@ void explainComparator(){
         cout << arr[i] << " "; // 6 5 2 1
     }
 
-   
+   */
    
    
    
@@ -332,13 +339,13 @@ int main(){
     explainAccumulate();
     explainCount();
     explainFind();
-    explainBinarySearch();
-    explainLowerBound();
-    explainUpperBound();
-    explainErase();
+    //explainBinarySearch();
+    //explainLowerBound();
+    //explainUpperBound();
+    //explainErase();
     explainNextPermutation();
     explainPrevPermutation();
-    explainDistance();
+    //explainDistance();
     explainReverse();
     explainComparator();
 
