@@ -334,6 +334,46 @@ void explainComparator(){
     */
 }
 
+
+void explainComparator2(){
+    //Let's do some more complex stuff.
+    pair<int, int> arr[] = {{1, 6}, {1, 5}, {2, 6}, {2, 9}, {3, 9}}; 
+    sort (arr, arr+5);
+    for(int i=0; i<5; i++){
+        cout<< "{" << arr[i].first<<","<<arr[i].second << "}" ;
+    }
+    cout<<endl;
+    //Output: {1,5} {1,6} {2,6} {2,9} {3,9}
+    //It is sorting on the basis of the first element of the pair. 
+    //If the first element is same then it will sort on the basis of the second element of the pair.
+
+    // Above code was prettymuch by default. But what if I want to sort on the basis of the second element of the pair.
+    // Sort it according to the second element of the pair.
+    // {2,9} {3,9} {1,5} {1,6} {2,6}
+    /* sort(arr, arr+5, [](pair<int, int> p1, pair<int, int> p2){
+        return p1.second < p2.second;
+    });
+    for(int i=0; i<5; i++){
+        cout<< "{" << arr[i].first<<","<<arr[i].second << "}" ;
+    }
+    cout<<endl; */
+    sort (arr, arr+5, internalComparator);
+    for(int i=0; i<5; i++){
+        cout<< "{" << arr[i].first<<","<<arr[i].second << "}" ;
+    }
+    cout<<endl;
+    //Output: {2,9} {3,9} {1,5} {1,6} {2,6}
+
+
+}
+bool internalComparator(pair<int, int> el1, pair<int, int> el2) {
+    if (el1.second > el2.second) return true;
+    if (el1.second < el2.second) return false;
+    if (el1.first < el2.first) return true;
+    return false;
+}
+
+
 int main(){
     explainSort();
     explainAccumulate();
@@ -348,11 +388,22 @@ int main(){
     //explainDistance();
     explainReverse();
     explainComparator();
-
+    explainComparator2();
     return 0;
 }
 
 
+// That's it, it is the artery of the STL.
+// You know Containers, Iterators, Functions and Algorithms.
+// Functions like pow, sqrt, etc are also there in the STL.
+// Containers like vector, set, map, etc are also there in the STL.
+// Iterators like begin, end, etc are also there in the STL.
+// Functions and Algorithms like sort, reverse, etc are also there in the STL.
+
+
+//Knowing Comparator is very important.
+// IN PQ WE DID THAT 3RD ARGUMENT THING. <greater<int>> now you know and you can 
+// replace it with your own comparator function.
 
 
 
