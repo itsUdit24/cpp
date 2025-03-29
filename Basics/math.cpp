@@ -91,7 +91,16 @@ int fun(int num){
     if (num == 0)
             return 1;
         //return math.floor(math.log10(abs(num))) + 1;
-        return floor(log10(abs(num)) + 1);
+        return floor(log10(abs(num)) + 1); //here abs(num) is used to handle negative numbers, like -12345
+        // It will return 5 for -12345 as well.
+        //The log10 function calculates the base-10 logarithm of the absolute value of num.
+        //The floor function rounds down the result to the nearest integer.
+        //Finally, we add 1 to account for the fact that the logarithm gives us the number of digits minus 1.
+        //So, the final result is the number of digits in the number.
+        //This method is more efficient than the previous one, as it does not require a loop to count the digits.
+        //The time complexity of this method is O(1), as it uses a constant number of operations regardless of the size of the input number.
+        //The space complexity is also O(1), as it does not use any additional data structures or recursive calls.
+        //So, the space complexity is constant, O(1).
 }
 int main(){
     int num;
