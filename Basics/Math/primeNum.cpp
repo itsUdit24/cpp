@@ -45,3 +45,23 @@ The Sieve of Eratosthenes algorithm is efficient for finding all prime numbers u
 The time complexity is O(n log log n) because the algorithm iterates through the numbers and marks multiples of each prime number.
 The space complexity is O(n) because we are using a boolean vector of size n to store the primality of numbers.
 */
+
+
+/*
+✅ Example:
+For n = 100:
+
+Naive approach: Loop from 2 to 99 → 98 iterations
+
+Optimized approach: Loop from 2 to 10 → 9 iterations
+
+The optimized approach is much faster for large numbers! 🚀
+
+
+🚀 Why is it Faster?
+In the naive approach, you check all numbers from 2 to n-1 → O(n) time complexity
+
+Using the square root optimization, you only check up to sqrt(n) → O(sqrt(n) time complexity
+
+This drastically reduces the number of iterations, especially for large numbers.
+*/
