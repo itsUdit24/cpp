@@ -61,6 +61,10 @@ void explainVector(){
     vec.push_back(2);
     vec.emplace_back(0); // You can also use emplace_back() to insert an element at the end of the vector.
 
+    // Genrally emplace_back() is used when you are inserting an object of a class in the vector.
+    // But in this case, it is same as push_back(). And it is faster than push_back() because it doesn't create a copy of the object.
+    // So if you are inserting an object of a class in the vector, use emplace_back() instead of push_back().
+
     cout<< vec.size() << endl; // This is how you get the size of the vector. output: 3
     cout<< vec.capacity() << endl; // This is how you get the capacity of the vector.  output: 4, because the default capacity is 1, and it doubles when it is full. Here, 1+2+1 = 4.
     // The difference between size and capacity is that size is the number of elements in the vector,
