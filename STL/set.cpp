@@ -11,7 +11,9 @@ Set Container:
 
 
 Set Container in C++
-A set is an associative container that contains a sorted set of unique objects of type Key. It is usually implemented using a Red-Black Tree, which is a type of self-balancing binary search tree. The value of an element in a set is also its key, which uniquely identifies it.
+A set is an associative  that contains a sorted set of unique objects of type Key. 
+It is usually implemented using a Red-Black Tree, which is a type of self-balancing binary search tree. 
+The value of an element in a set is also its key, which uniquely identifies it.
 
 Real-World Example
 A real-world example of a set is a collection of unique book titles in a library. Each book title is unique and stored in a sorted order, allowing for efficient lookup, insertion, and deletion of book titles.
