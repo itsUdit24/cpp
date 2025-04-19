@@ -53,6 +53,9 @@ void explainStack(){
     st.pop(); // deletes 1 from the stack.
     cout<<st.top()<<" "; //output: Runtime Error. As there is no element in the stack.
 
+    // st.top() and st.pop() are the two most important functions of stack.
+    // st.top() returns the top element of the stack without removing it, while st.pop() removes the top element of the stack.
+
     //Printing the stack
     st.push(1);
     st.push(7);
