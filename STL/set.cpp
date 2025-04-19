@@ -67,7 +67,10 @@ Output:
 Set elements: 10 20 30
 20 is in the set
 
-In this example, elements are added to the set using the insert method. The set automatically ensures that only unique elements are stored. The find method is used to check if an element exists in the set. The elements in the set are displayed in sorted order.
+In this example, elements are added to the set using the insert method. 
+The set automatically ensures that only unique elements are stored. 
+The find method is used to check if an element exists in the set. 
+The elements in the set are displayed in sorted order.
 */
 
 
