@@ -9,7 +9,10 @@ Real-World Example
     A real-world example of a multimap is a student-course registration system. 
     A student (key) can register for multiple courses (values). 
     The multimap allows storing multiple courses for the same student while maintaining the sorted order of student IDs.
-
+    
+    SINGLE KEY -> MULTIPLE VALUES
+    
+    
 Applications of Multimap
 1) Duplicate Key Storage: Multimaps are used when multiple values need to be associated with the same key, 
     such as storing multiple phone numbers for a single contact.
