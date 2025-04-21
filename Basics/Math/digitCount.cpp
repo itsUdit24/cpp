@@ -20,3 +20,38 @@ int main() {
 
     return 0;
 }
+
+/*
+#include <iostream>
+#include <cmath> // For math functions
+using namespace std;
+
+int countDigit(int n) {
+    if (n == 0) {
+        return 1;
+    }
+
+    return floor(log10(abs(n)) + 1); // Corrected log10 and variable
+}
+
+int main() {
+    int n;
+    cin >> n;
+    int ans = countDigit(n);
+    cout << ans << endl;
+    return 0;
+}
+
+Sample Output:
+Input: 12345
+Output: 5
+
+✅ Explanation:
+1) log10(abs(n)) calculates the logarithm base 10 of the absolute value of n.
+
+2) floor(log10(abs(n)) + 1) gives the correct number of digits.
+
+ - For 12345 → log10(12345) ≈ 4.09 → floor(4.09 + 1) = 5
+
+3) abs(n) handles negative numbers correctly.
+*/
