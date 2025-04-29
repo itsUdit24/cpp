@@ -6,6 +6,10 @@ a FIFO (first-in, first-out) data structure.
 This means that the first element added to the queue will be the first one to be removed. 
 The standard container classes deque and list can be used to implement the queue container adapter.
 
+Why not vector?
+Because vector is not a good choice for implementing a queue, 
+as it does not provide efficient insertion and deletion at both ends.
+
 Real-World Example
 A real-world example of a queue is a line of people waiting at a ticket counter. 
 The first person in line is the first one to be served, and new people join the end of the line. 

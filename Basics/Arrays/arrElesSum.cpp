@@ -26,7 +26,13 @@ int main() {
 }
 
 
+/*
+v.size() = 4 → because there are 4 elements: {10, 20, 30, 40}.
 
+But the indices are: 0, 1, 2, 3.
+
+Last index = size() - 1 = 4 - 1 = 3.
+*/
 
 
 
