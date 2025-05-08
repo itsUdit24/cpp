@@ -104,3 +104,4 @@ Enter 5 elements: 1 2 3 4 5
 Original array: 1 2 3 4 5
 Reversed array (Optimized): 5 4 3 2 1
 */
+//example
