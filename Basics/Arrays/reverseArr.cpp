@@ -108,3 +108,4 @@ Reversed array (Optimized): 5 4 3 2 1
 // electricity cut-off
 // going with the flow tomorrow 3rd round of Cognizant Technical Round.
 // Cognizant Technical Round done, 2 queries from SQL, 2 Java questions, 3 web dev questions.
+// We'll resume 
