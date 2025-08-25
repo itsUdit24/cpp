@@ -1,5 +1,5 @@
 # cpp
-To work on your GitHub repository from your local machine using VS Code, follow these steps:  
+To work on your GitHub repository from your local machine using VS Code, follow out these steps:  
 
 ### **Step 1: Clone the Repository to Your Local Machine**  
 1. Open **GitHub** and navigate to your repository.  
