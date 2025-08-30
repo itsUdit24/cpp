@@ -1,4 +1,4 @@
-# cpp code
+# cpp codes
 To work on your GitHub repository from your local machine using VS Code, follow out these steps:  
 
 ### **Step 1: Clone the Repository to Your Local Machine**  
