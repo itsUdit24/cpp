@@ -39,5 +39,7 @@ Let's break down the code step by step:
 
 6. **Getting Balance**: Finally, we call the `getBalance()` method to retrieve the current balance and print it to the console.
 
-This code demonstrates the concept of encapsulation in Java, where the internal state of an object is protected from direct access by outside code. Instead, public methods are provided to interact with the object's state in a controlled manner.
+This code demonstrates the concept of encapsulation in Java, 
+where the internal state of an object is protected from direct access by outside code. 
+Instead, public methods are provided to interact with the object's state in a controlled manner.
 */
