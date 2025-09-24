@@ -42,4 +42,6 @@ Let's break down the code step by step:
 This code demonstrates the concept of encapsulation in Java, 
 where the internal state of an object is protected from direct access by outside code. 
 Instead, public methods are provided to interact with the object's state in a controlled manner.
+this is a fundamental principle of Object-Oriented Programming (OOP) that 
+helps in maintaining data integrity and security.
 */
