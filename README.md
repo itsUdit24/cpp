@@ -2,7 +2,7 @@
 To work on your GitHub repo from your local machine using VS Code, follow out these steps here :-
 
 ### **Step 1: Clone the Repository to Your Local Machine**  
-1. Open **GitHub** and navigate to your repository.  
+1. Open **GitHub** and navigate to yours repository.  
 2. Click the **"Code"** button and copy the repository **HTTPS URL**.  
 3. Open **VS Code** and open the terminal (`Ctrl + ~` or `View > Terminal`).  
 4. Run the following command to clone the repo:  
