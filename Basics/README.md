@@ -61,7 +61,7 @@ HEAD always points to the most recent commit which is reflected in the working t
 
 Normally HEAD points to a branch name (like bugFix). When you commit, the status of bugFix is altered and this change is visible through HEAD.
 
-Detaching HEAD
+# **Detaching HEAD**
 
 Detaching HEAD just means attaching it to a commit instead of a branch. This is what it looks like beforehand:
 
